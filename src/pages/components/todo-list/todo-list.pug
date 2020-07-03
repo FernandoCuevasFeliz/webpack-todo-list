@@ -1,0 +1,105 @@
+.todo-list-container
+   div(class="todo-list")
+      h1(class="todo-list__title") Todo List
+      .todo-list__form-container
+         div(class="todo-list__form")
+            h2(class="todo-list__title") Create Tasks
+            .todo-list__form-data
+               .todo-list__form-control
+                  label(class="todo-list__form-label",for="task") Add a Task
+                  input(class="todo-list__input",type="text",placeholder="Task",id="task")
+               .todo-list__form-control
+                  label(class="todo-list__form-label",for="") Date:
+                  input(class="todo-list__input",type='date',value="2020-12-12",id="date")
+               .todo-list__form-control
+                  label(class="todo-list__form-label",for="") Time:
+                  input(class="todo-list__input",type='time',value="01:13",id="time")
+         
+         
+            .todo-list__form-control
+               label(class=".todo-list__form-label",for="") Color Task:
+               div(class="btns-container")
+                  button(class="btn-color btn-color btn-task--active",color="#e55039"): i(class="fas fa-check")
+                  button(class="btn-color btn-color",color="#4a69bd")
+                  button(class="btn-color btn-color",color="#78e08f")
+                  button(class="btn-color btn-color",color="#f6b93b")
+                  button(class="btn-color btn-color",color="#60a3bc")
+         
+            button(class="btn-save",id="btn-save") 
+               i(class="fas fa-save")
+
+         div(class="todo-list__form") 
+            h2(class="todo-list__title") The 2 Older Tasks
+            
+            .task__item
+               .task__head
+                  h3(class="task__item-title") Task 1
+
+               .task__body
+                  .temp 
+                     span(class="time-input") 1h
+                     span(class="time-input") 22m
+                     span(class="time-input") 56s
+                  .btns-task-container
+                     button(class="btn-task",id="btn-edit"): i(class="fas fas fa-pen")
+                     button(class="btn-task",id="btn-delete"): i(class="far fa-trash-alt")
+
+               .task__footer            
+                  button(class="btn-complete",id="btn-complete"): i(class="fas fa-check")
+
+            .task__item
+               .task__head
+                  h3(class="task__item-title") Task 1
+
+               .task__body
+                  .temp 
+                     span(class="time-input") 1h
+                     span(class="time-input") 22m
+                     span(class="time-input") 56s
+                  .btns-task-container
+                     button(class="btn-task",id="btn-edit"): i(class="fas fas fa-pen")
+                     button(class="btn-task",id="btn-delete"): i(class="far fa-trash-alt")
+
+               .task__footer            
+                  button(class="btn-complete",id="btn-complete"): i(class="fas fa-check")
+      .task-container
+         .task
+            h2(class="task__title") Tasks Completed
+            
+            .task__item
+               .task__head
+                  h3(class="task__item-title") Task 1
+
+               .task__body
+                  .temp 
+                     span(class="time-input") 1h
+                     span(class="time-input") 22m
+                     span(class="time-input") 56s
+                  .btns-task-container
+
+                     button(class="btn-task",id="btn-delete"): i(class="far fa-trash-alt")
+
+               .task__footer            
+                  button(class="btn-complete",id="btn-complete"): i(class="fas fa-check")
+               
+                  
+
+         .task
+            h2(class="task__title") Tasks not Completed
+            
+            .task__item
+               .task__head
+                  h3(class="task__item-title") Task 1
+
+               .task__body
+                  .temp 
+                     span(class="time-input") 1h
+                     span(class="time-input") 22m
+                     span(class="time-input") 56s
+
+                  .btns-task-container
+                     button(class="btn-task",id="btn-edit"): i(class="fas fas fa-pen")
+                     button(class="btn-task",id="btn-delete"): i(class="far fa-trash-alt")
+               
+               .task__footer
+                  button(class="btn-complete",id="btn-complete"): i(class="fas fa-check")

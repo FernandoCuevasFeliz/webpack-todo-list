@@ -1,0 +1,230 @@
+.todo-list-container {
+  width: 100%;
+  height: 100vh;
+  background-color: $secondary;
+  .todo-list {
+    width: 90%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    justify-content: center;
+    .todo-list__form-container {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__title {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      text-align: center;
+    }
+
+    &__form {
+      width: 100%;
+      border: 1px solid $secondary;
+      padding: 20px;
+    }
+    &__form:nth-child(2) {
+      display: none;
+    }
+    @media screen and (min-width: $lg) {
+      &__form {
+        width: (100% / 2)- 2;
+      }
+      &__form:nth-child(2) {
+        display: block;
+      }
+    }
+
+    &__form-data {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    &__form-control {
+      width: 100%;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+
+    &__form-label {
+      display: block;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+    &__input {
+      width: 100%;
+      font-size: 18px;
+      padding: 3px 5px;
+      border-radius: 5px;
+      border: 1px solid $secondary;
+      outline-color: $primary;
+    }
+
+    .btns-container {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-self: center;
+      justify-self: center;
+    }
+
+    .btn-color,
+    .btn-save,
+    .btn-task {
+      outline: none;
+      cursor: pointer;
+      border-radius: 5px;
+      & > .fas {
+        color: $white;
+        font-size: 18px;
+      }
+    }
+
+    .btn-color {
+      width: 50px;
+      height: 50px;
+      border: 2px solid transparent;
+    }
+
+    .btn-color:nth-child(1) {
+      background-color: $danger;
+    }
+    .btn-color:nth-child(2) {
+      background-color: #4a69bd;
+    }
+    .btn-color:nth-child(3) {
+      background-color: #78e08f;
+    }
+    .btn-color:nth-child(4) {
+      background-color: #f6b93b;
+    }
+    .btn-color:nth-child(5) {
+      background-color: #60a3bc;
+    }
+
+    .btn-save {
+      width: 100%;
+      border: none;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      background-color: #0097e6;
+    }
+
+    // tasks
+
+    .task-container {
+      width: 100%;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      @media screen and (min-width: $xm) {
+        .task {
+          width: (100% / 2) - 2;
+        }
+      }
+    }
+
+    .task {
+      width: 100%;
+    }
+    .task__title {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    .task__item {
+      color: $white;
+      background-color: $danger;
+      padding: 20px;
+      margin-bottom: 15px;
+      border: 1px solid $secondary;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+
+    .task__head {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .task__body {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      height: auto;
+    }
+    @media screen and (max-width: $xs) {
+      .task__body {
+        flex-direction: column;
+        align-items: space-between;
+        justify-content: center;
+      }
+      .temp,
+      .btns-task-container {
+        display: flex;
+      }
+      .temp {
+        margin-bottom: 8px;
+        width: 100%;
+        justify-content: space-between;
+
+        .time-input {
+          margin-right: 0;
+          width: (100% / 3) - 1;
+          text-align: center;
+        }
+      }
+      .btns-task-container {
+        width: 100%;
+        justify-content: space-between;
+        .btn-task {
+          margin-left: 0;
+          width: (100% / 2) - 3;
+        }
+      }
+    }
+
+    .btn-task {
+      border: 1px solid $black;
+      border-radius: 0;
+      padding: 10px 20px;
+      margin-left: 10px;
+      font-size: 18px;
+    }
+    .time-input {
+      background-color: $black;
+      color: $white;
+      padding: 8px 10px;
+      margin-right: 5px;
+    }
+    .btn-task:nth-child(1) {
+      background-color: $primary;
+    }
+    .btn-task:nth-child(2) {
+      background-color: #8c7ae6;
+    }
+    .btn-complete {
+      border: none;
+      color: $white;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      width: 100%;
+      background-color: $primary;
+      cursor: pointer;
+      outline: none;
+    }
+  }
+}

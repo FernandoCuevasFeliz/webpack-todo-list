@@ -1,0 +1,10 @@
+.todo-list-container {
+  .todo-list {
+    .btn-color:hover {
+      border-color: $black;
+    }
+    .btn-task--active {
+      border: 2px solid $black;
+    }
+  }
+}
